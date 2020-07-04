@@ -15,6 +15,7 @@ class PostAdmin(admin.ModelAdmin):
     fields = ['post_title', 'post_text', 'post_image']
     list_display = ['post_title', 'blurb', 'post_date']
     list_filter = ['post_date']
+    search_fields = ['post_title', 'post_text']
 
 
 admin.site.register(Post, PostAdmin)
